@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::resource('items', 'ItemController');
+Route::get('items/{item}/delete', 'ItemController@delete');
  // リソースを使用しない場合
  // Route::get('/items','ItemController@index');
  // Route::get('/items/create', 'ItemController@new');

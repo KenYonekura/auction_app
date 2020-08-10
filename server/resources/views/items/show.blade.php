@@ -19,3 +19,6 @@
                 <!-- public/storage は strage/app/publicのショートカットのようなもの -->
                 <img src="/storage/image/{{ $item->image }}">
             </p>
+            <a href="/items/{{ $item->id }}/edit">編集する</a>
+            <!-- web.phpで定義したルーティングの部分へデータを飛ばす -->
+            <a href="/items/{{ $item->id }}/delete">削除する</a>
