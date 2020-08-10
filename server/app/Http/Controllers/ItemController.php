@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 // アイテムクラスを読み込む
 use App\Item;
 use Illuminate\Http\Request;
+use App\Http\Requests\ItemRequest;
 
 class ItemController extends Controller
 {
@@ -22,7 +23,7 @@ class ItemController extends Controller
         return view('items.create');
     }
 
-    public function store(Request $request)
+    public function store(ItemRequest $request)
     {
         // インスタンスの作成
         $item = new Item;
